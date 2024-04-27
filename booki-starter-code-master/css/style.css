@@ -72,7 +72,7 @@ header {
 
 .logo-container {
     display: flex;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 50px 30px 0px;
     gap: 10px;
 }
 
@@ -90,19 +90,28 @@ nav {
     background-color: #0065FC;
     height: 2px;
     width: auto;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .host-link {
-    transition: all 0.3s;
+    color: #0065FC;
 }
 
 .host-link:hover {
     color: #0065FC;
 }
 
+.activity-link span {
+    display: none;
+}
+
 .activity-link {
-    transition: all 0.3s;
+    margin-top: 16px;
+}
+
+.activity-link:hover .blue-bar {
+    display: flex;
+    margin-top: -14px;
 }
 
 .activity-link:hover {
@@ -251,7 +260,10 @@ nav {
     box-sizing: border-box;
 }
 
+
+
 /****** Hebergements ***********/
+
 .hebergements {
     width: 65%;
     gap: 30px;
@@ -259,48 +271,63 @@ nav {
 
 .hebergements-h2 {
     margin-top: -5px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
-.hebergements-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 5px 5px 30px 5px;
-}
-
-.hebergements-picture {
+.hebergements-card-container {
     width: 100%;
-    height: 110px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hebergements-card-container a {
+    display: inline-block;
+    height: auto;
+    width: 29%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px 15px 0px 15px;
+}
+
+.hebergements-card {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    min-width: 180px;
+    flex-direction: column;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.hebergements-card img {
+    height: 120px;
+    min-height: 120px;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.card-content-hebergements {
-    width: 235px;
-    height: 70px;
+.hebergements-card-content {
     display: flex;
+    width: 100%;
+    height: 100px;
     flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding-left: 15px;
-    margin-bottom: 10px;
+    padding: 0px 0px 10px 10px;
 }
 
-.hebergements-card-title {
-    margin-bottom: -10px;
-    margin-top: 5px;
-    font-size: 16px;
+.hebergements-card-txt h3 {
+    margin-top: 10px;
 }
 
-.hebergements-card-rating {
+.hebergements-card-txt p {
     margin-top: -10px;
+    margin-bottom: 5px;
 }
 
 .hebergements-h3 {
-    margin-top: 10px;
-    margin-bottom: -10px;
+    margin-top: 30px;
 }
 
 
@@ -366,35 +393,45 @@ nav {
 }
 
 .activity-card-container {
-    display: flex;
-    gap: 30px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.activity-card-container a {
+    display: inline-block;
+    height: auto;
+    width: 21%;
+    min-width: 180px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .activity-card {
-    display: flex;
-    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
     overflow: hidden;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    border-radius: 20px;
-    height: 400px;
-    width: 290px;
+    max-height: 400px;
+    min-width: 180px;
 }
 
-.activity-card-content {
-    display: flex;
-    background-color: white;
-}
-
-.activity-picture {
-    height: 340px;
+.activity-card img {
     width: 100%;
+    height: 350px;
+    max-height: 350px;
     object-fit: cover;
 }
 
-.activity-card-title {
+.activity-card div {
+    display: flex;
+    align-items: center;
     padding-left: 15px;
+    height: 50px;
+}
+
+.activity-card h3 {
+    margin-top: 5px;
 }
 
 /****** Footer ***********/
@@ -443,6 +480,12 @@ footer {
         width: 100%;
     }
 
+    .hebergements-cards {
+        gap: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -465,6 +508,23 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activity-card {
+        margin-top: 15px;
+    }
+
+    .activity-card h3 {
+        min-width: 200px;
+    }
+
+    .activity-card img {
+        height: 200px;
+    }
+
+    .activity-card div {
+        max-height: 50px;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
