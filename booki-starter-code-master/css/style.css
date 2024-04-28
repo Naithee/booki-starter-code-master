@@ -166,7 +166,7 @@ nav {
     justify-content: center;
     width: 230px;
     font-weight: bold;
-    padding-left: 10px;
+    padding-left: 15px;
     font-size: 16px;
 }
 
@@ -276,33 +276,39 @@ nav {
 
 .hebergements-card-container {
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.hebergements-card-container a {
-    display: inline-block;
-    height: auto;
-    width: 29%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0px 15px 0px 15px;
+.card-row a {
+    display: flex;
+    width: 30%;
 }
 
 .hebergements-card {
     display: flex;
-    height: 200px;
+    height: 90%;
     width: 100%;
-    min-width: 180px;
     flex-direction: column;
     background-color: white;
-    padding: 5px;
+    padding: 5px; 
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.card-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
 .hebergements-card img {
     height: 120px;
+    width: 100%;
     min-height: 120px;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -311,8 +317,6 @@ nav {
 
 .hebergements-card-content {
     display: flex;
-    width: 100%;
-    height: 100px;
     flex-direction: column;
     padding: 0px 0px 10px 10px;
 }
@@ -396,13 +400,15 @@ nav {
     width: 100%;
     height: auto;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .activity-card-container a {
     display: inline-block;
     height: auto;
-    width: 21%;
-    min-width: 180px;
+    width: 23%;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -413,7 +419,6 @@ nav {
     overflow: hidden;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     max-height: 400px;
-    min-width: 180px;
 }
 
 .activity-card img {
@@ -424,7 +429,6 @@ nav {
 }
 
 .activity-card div {
-    display: flex;
     align-items: center;
     padding-left: 15px;
     height: 50px;
@@ -521,6 +525,13 @@ footer {
         height: 200px;
     }
 
+    .activity-card-container a {
+        width: 20%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
     .activity-card div {
         max-height: 50px;
     }
@@ -531,4 +542,5 @@ footer {
 @media (max-width: 767.98px) {
     /* ... */
 
+    
 }
